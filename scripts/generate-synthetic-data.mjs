@@ -3,7 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const outputDir = path.join(projectRoot, "public", "data");
+const outputDir = path.join(projectRoot, "data");
 fs.mkdirSync(outputDir, { recursive: true });
 
 function seededRandom(seed) {

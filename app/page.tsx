@@ -78,28 +78,12 @@ function splitMinutes(total: number) {
   return [warmup, total - warmup - close, close];
 }
 
-const funnelData = [
-  { label: "랜딩 방문", count: 142, percent: 100, conversion: "기준" },
-  { label: "추천 입력 시작", count: 118, percent: 83.1, conversion: "83.1%" },
-  { label: "추천 확인", count: 104, percent: 73.2, conversion: "88.1%" },
-  { label: "루틴 시작", count: 75, percent: 52.8, conversion: "72.1%" },
-  { label: "루틴 완료", count: 55, percent: 38.7, conversion: "73.3%" },
-];
-
-const gapPerformance = [
-  { label: "20—39분", sessions: 28, start: 60.7, complete: 58.8 },
-  { label: "40—59분", sessions: 34, start: 76.5, complete: 76.9 },
-  { label: "60—89분", sessions: 27, start: 77.8, complete: 81.0 },
-  { label: "90분 이상", sessions: 15, start: 73.3, complete: 72.7 },
-];
-
 export default function Home() {
   const [minutes, setMinutes] = useState(40);
   const [energy, setEnergy] = useState<Energy>("steady");
   const [goal, setGoal] = useState<Goal>("focus");
   const [place, setPlace] = useState<Place>("quiet");
   const [routineStatus, setRoutineStatus] = useState<RoutineStatus>("ready");
-  const [rating, setRating] = useState<number | null>(null);
 
   const routine = useMemo(() => {
     const [warmup, main, close] = splitMinutes(minutes);
@@ -117,7 +101,6 @@ export default function Home() {
 
   const generateRoutine = () => {
     setRoutineStatus("ready");
-    setRating(null);
   };
 
   return (
@@ -129,7 +112,6 @@ export default function Home() {
         <nav aria-label="주요 메뉴">
           <a href="#how">서비스 소개</a>
           <a href="#maker">루틴 만들기</a>
-          <a href="#validation">검증 결과</a>
         </nav>
         <a className="header-cta" href="#maker">
           지금 추천받기
@@ -152,8 +134,8 @@ export default function Home() {
             <a className="primary-button" href="#maker">
               내 공강 설계하기
             </a>
-            <a className="text-link" href="#validation">
-              검증 방식 먼저 보기
+            <a className="text-link" href="#how">
+              서비스 방식 보기
             </a>
           </div>
           <dl className="hero-stats" aria-label="서비스 핵심 수치">
@@ -230,8 +212,8 @@ export default function Home() {
           </article>
           <article>
             <span>03</span>
-            <h3>시작과 완료를 측정합니다</h3>
-            <p>추천을 본 횟수가 아니라 실제 시작률과 완료율을 핵심 KPI로 봅니다.</p>
+            <h3>다음 행동을 분명히 합니다</h3>
+            <p>준비, 핵심, 마무리의 세 단계로 무엇부터 할지 바로 알 수 있습니다.</p>
           </article>
         </div>
       </section>
@@ -240,7 +222,7 @@ export default function Home() {
         <div className="section-heading">
           <p className="eyebrow">직접 사용해 보기</p>
           <h2 id="maker-title">지금 공강에 맞는 루틴을 만드세요.</h2>
-          <p>정답을 찾는 설문이 아닙니다. 현재 상태에 가장 실행하기 쉬운 안을 고릅니다.</p>
+          <p>현재 상태에 가장 실행하기 쉬운 안을 고르면 바로 루틴을 제안합니다.</p>
         </div>
 
         <div className="maker-grid">
@@ -345,23 +327,6 @@ export default function Home() {
                 <p className="complete-number">완료</p>
                 <h3>공강을 결과로 바꿨습니다.</h3>
                 <p>완벽하게 했는지보다 정한 시간 안에 끝까지 간 것을 기록했습니다.</p>
-                <div className="rating-box">
-                  <p>이 추천이 얼마나 도움이 되었나요?</p>
-                  <div aria-label="도움됨 평가">
-                    {[1, 2, 3, 4, 5].map((score) => (
-                      <button
-                        aria-pressed={rating === score}
-                        className={rating === score ? "selected" : ""}
-                        key={score}
-                        onClick={() => setRating(score)}
-                        type="button"
-                      >
-                        {score}
-                      </button>
-                    ))}
-                  </div>
-                  <span>{rating ? `${rating}점으로 기록했습니다.` : "1점 낮음 · 5점 높음"}</span>
-                </div>
                 <button type="button" onClick={() => setRoutineStatus("ready")}>
                   다른 조건으로 다시 만들기
                 </button>
@@ -412,151 +377,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="validation-section" id="validation" aria-labelledby="validation-title">
-        <div className="validation-heading">
-          <div>
-            <p className="eyebrow">사용자 검증 대시보드</p>
-            <h2 id="validation-title">추천을 봤는지가 아니라, 실제로 움직였는지를 봤습니다.</h2>
-          </div>
-          <p>
-            랜딩부터 추천, 시작, 완료, 피드백까지 이어지는 행동 퍼널을 기준으로
-            서비스 가설을 점검했습니다.
-          </p>
-        </div>
-
-        <div className="data-notice" role="note">
-          <strong>과제용 합성 데이터</strong>
-          <p>
-            아래 결과는 KPI 구조와 분석 방법을 보여주기 위해 생성한 시뮬레이션입니다.
-            실제 사용자 조사 결과가 아니며, 실제 검증 시 같은 스키마에 수집 데이터를 교체합니다.
-          </p>
-          <span>2026.08.04—08.13 · 가상 참여자 40명 · 추천 노출 104세션</span>
-        </div>
-
-        <div className="metric-grid" aria-label="핵심 KPI">
-          <article>
-            <div className="metric-topline"><span>핵심 KPI 01</span><b>목표 65%</b></div>
-            <strong>72.1<small>%</small></strong>
-            <h3>추천 시작률</h3>
-            <p>추천을 확인한 104세션 중 75세션이 루틴을 실제로 시작했습니다.</p>
-            <span className="target-result">목표 대비 +7.1%p</span>
-          </article>
-          <article>
-            <div className="metric-topline"><span>핵심 KPI 02</span><b>목표 65%</b></div>
-            <strong>73.3<small>%</small></strong>
-            <h3>시작 후 완료율</h3>
-            <p>루틴을 시작한 75세션 중 55세션이 마지막 단계까지 완료했습니다.</p>
-            <span className="target-result">목표 대비 +8.3%p</span>
-          </article>
-          <article>
-            <div className="metric-topline"><span>품질 KPI</span><b>목표 4.0</b></div>
-            <strong>4.14<small>/5</small></strong>
-            <h3>평균 도움됨 점수</h3>
-            <p>피드백 50건 중 40건이 4점 이상으로, 긍정 응답률은 80.0%입니다.</p>
-            <span className="target-result">목표 대비 +0.14점</span>
-          </article>
-          <article>
-            <div className="metric-topline"><span>행동 KPI</span><b>목표 50%</b></div>
-            <strong>70.0<small>%</small></strong>
-            <h3>다회 체험률</h3>
-            <p>가상 참여자 40명 중 28명이 파일럿 기간에 두 번 이상 체험했습니다.</p>
-            <span className="target-result">Retention이 아닌 체험 빈도</span>
-          </article>
-        </div>
-
-        <div className="analysis-grid">
-          <article className="analysis-panel funnel-panel">
-            <div className="panel-heading">
-              <div><span>행동 퍼널</span><h3>142번의 방문이 55번의 완료로 이어졌습니다.</h3></div>
-              <p>각 전환율은 바로 이전 단계 기준</p>
-            </div>
-            <div className="funnel-chart">
-              {funnelData.map((item, index) => (
-                <div className="funnel-row" key={item.label}>
-                  <div className="funnel-label">
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <strong>{item.label}</strong>
-                  </div>
-                  <div className="funnel-bar-track">
-                    <div className="funnel-bar" style={{ width: `${item.percent}%` }} />
-                  </div>
-                  <b>{item.count}</b>
-                  <small>{item.conversion}</small>
-                </div>
-              ))}
-            </div>
-            <p className="chart-note">가장 큰 개선 지점은 추천 확인 이후 실제 시작으로 넘어가는 구간입니다.</p>
-          </article>
-
-          <article className="analysis-panel segment-panel">
-            <div className="panel-heading">
-              <div><span>공강 길이별</span><h3>60—89분 구간에서 가장 강했습니다.</h3></div>
-              <p>시작률 · 시작 후 완료율</p>
-            </div>
-            <div className="legend" aria-hidden="true">
-              <span><i className="start-swatch" />시작률</span>
-              <span><i className="complete-swatch" />완료율</span>
-            </div>
-            <div className="segment-chart">
-              {gapPerformance.map((item) => (
-                <div className="segment-row" key={item.label}>
-                  <div className="segment-label"><strong>{item.label}</strong><span>{item.sessions}세션</span></div>
-                  <div className="double-bars">
-                    <div><span style={{ width: `${item.start}%` }} /><b>{item.start.toFixed(1)}%</b></div>
-                    <div><span style={{ width: `${item.complete}%` }} /><b>{item.complete.toFixed(1)}%</b></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <p className="chart-note">40분 미만에서는 더 짧은 10분 루틴을 우선 제시하는 개선이 필요합니다.</p>
-          </article>
-        </div>
-
-        <div className="learning-grid">
-          <article>
-            <span>검증 가설</span>
-            <h3>상태에 맞춘 한 가지 제안은 선택 부담을 줄이고 시작률을 높인다.</h3>
-            <p>노출 수나 페이지 체류시간보다 추천 이후의 시작 행동을 성공 기준으로 설정했습니다.</p>
-          </article>
-          <article>
-            <span>핵심 발견</span>
-            <h3>시간 여유보다 낮은 에너지가 미시작과 중단에 더 크게 연결됐습니다.</h3>
-            <p>낮은 에너지 세션의 시작률은 62.1%, 시작 후 완료율은 55.6%였습니다.</p>
-          </article>
-          <article>
-            <span>다음 실험</span>
-            <h3>방전 상태에는 3단계 대신 10분짜리 단일 회복 행동을 먼저 제시합니다.</h3>
-            <p>다음 버전에서는 낮은 에너지 세그먼트의 시작률 70%를 목표로 비교합니다.</p>
-          </article>
-        </div>
-
-        <div className="method-download">
-          <div className="method-copy">
-            <p className="eyebrow">측정 방법</p>
-            <h3>분자와 분모가 보이는 KPI만 사용했습니다.</h3>
-            <dl>
-              <div><dt>추천 시작률</dt><dd>routine_start ÷ recommendation_view</dd></div>
-              <div><dt>시작 후 완료율</dt><dd>routine_complete ÷ routine_start</dd></div>
-              <div><dt>도움됨 긍정률</dt><dd>4점 이상 응답 ÷ 전체 도움됨 응답</dd></div>
-              <div><dt>다회 체험률</dt><dd>2회 이상 참여자 ÷ 전체 가상 참여자</dd></div>
-            </dl>
-          </div>
-          <div className="download-box">
-            <span>검증 데이터 내려받기</span>
-            <h3>집계값뿐 아니라 원본 행까지 확인할 수 있습니다.</h3>
-            <a href="/data/synthetic_validation_sessions.csv" download>세션 데이터 CSV <small>104행</small></a>
-            <a href="/data/synthetic_event_log.csv" download>이벤트 로그 CSV <small>544행</small></a>
-            <a href="/data/synthetic_kpi_summary.csv" download>KPI 요약 CSV <small>9개 지표</small></a>
-            <p>모든 파일의 data_source는 synthetic_course_demo로 표시됩니다.</p>
-          </div>
-        </div>
-      </section>
-
       <footer className="site-footer">
         <div><a className="wordmark" href="#top">틈새</a><p>애매한 공강을 실행 가능한 한 덩어리로.</p></div>
-        <div><span>서비스</span><a href="#how">소개</a><a href="#maker">루틴 만들기</a><a href="#validation">검증 결과</a></div>
-        <div><span>데이터</span><a href="/data/synthetic_validation_sessions.csv">세션 CSV</a><a href="/data/synthetic_event_log.csv">이벤트 CSV</a></div>
-        <p className="footer-note">Course prototype · Synthetic validation data · 2026</p>
+        <div><span>서비스</span><a href="#how">소개</a><a href="#maker">루틴 만들기</a></div>
+        <div><span>사용 흐름</span><a href="#maker">4개 조건 입력</a><a href="#maker">3단계 루틴 실행</a></div>
+        <p className="footer-note">틈새 · 공강 루틴 추천 서비스 · 2026</p>
       </footer>
     </main>
   );
