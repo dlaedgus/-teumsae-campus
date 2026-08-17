@@ -1,0 +1,105 @@
+data_source,participant_id,session_id,session_no,occurred_at,day_type,time_band,gap_minutes,gap_bucket,energy_score,energy_segment,location,goal,recommended_category,recommended_routine,recommended_minutes,recommendation_shown,started,start_delay_sec,completion_status,completed,actual_minutes,survey_responded,helpfulness_score,reuse_intent_score,feedback_tag
+synthetic_course_demo,P029,S0001,1,2026-08-04T20:30:00+09:00,weekday,evening,51,40-59,1,low,outside,small_task,admin,다음 수업 준비물 점검,30,1,1,92,abandoned,0,20,0,,,
+synthetic_course_demo,P038,S0002,1,2026-08-05T11:10:00+09:00,weekday,morning,114,90+,3,medium,lounge,small_task,admin,제출 목록 우선순위 정리,75,1,1,47,completed,1,80,1,5,5,fit_time
+synthetic_course_demo,P036,S0003,1,2026-08-06T12:20:00+09:00,weekday,afternoon,86,60-89,4,high,outside,small_task,admin,제출 목록 우선순위 정리,45,1,1,63,completed,1,49,0,,,
+synthetic_course_demo,P037,S0004,1,2026-08-07T19:00:00+09:00,weekday,evening,38,20-39,4,high,outside,small_task,admin,메일과 일정 세 개 정리,20,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P028,S0005,1,2026-08-08T18:20:00+09:00,weekend,evening,50,40-59,5,high,library,recharge,recovery,조용한 자리에서 눈 쉬기,35,1,1,79,completed,1,37,1,4,4,fit_time
+synthetic_course_demo,P038,S0006,2,2026-08-09T18:10:00+09:00,weekend,evening,46,40-59,1,low,library,small_task,admin,다음 수업 준비물 점검,25,1,1,75,completed,1,23,1,3,5,low_energy
+synthetic_course_demo,P017,S0007,1,2026-08-10T14:50:00+09:00,weekday,afternoon,26,20-39,2,low,outside,recharge,recovery,호흡과 물 마시기,20,1,1,50,completed,1,19,1,3,4,low_energy
+synthetic_course_demo,P034,S0008,1,2026-08-11T12:50:00+09:00,weekday,afternoon,73,60-89,3,medium,cafe,movement,exercise,캠퍼스 한 바퀴 걷기,55,1,1,55,completed,1,45,1,5,4,fit_time
+synthetic_course_demo,P032,S0009,1,2026-08-12T11:50:00+09:00,weekday,morning,51,40-59,3,medium,library,focus,study,과제 소단위 한 개 완성,25,1,1,33,completed,1,26,1,4,4,easy_start
+synthetic_course_demo,P024,S0010,1,2026-08-13T09:20:00+09:00,weekday,morning,66,60-89,3,medium,library,movement,exercise,계단과 스트레칭 루틴,40,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P039,S0011,1,2026-08-04T14:00:00+09:00,weekday,afternoon,47,40-59,1,low,lounge,recharge,recovery,화면 없이 천천히 걷기,25,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P031,S0012,1,2026-08-05T09:50:00+09:00,weekday,morning,80,60-89,2,low,outside,small_task,admin,메일과 일정 세 개 정리,55,1,1,41,completed,1,63,0,,,
+synthetic_course_demo,P023,S0013,1,2026-08-06T10:20:00+09:00,weekday,morning,29,20-39,2,low,outside,recharge,recovery,화면 없이 천천히 걷기,10,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P018,S0014,1,2026-08-07T17:10:00+09:00,weekday,evening,33,20-39,3,medium,cafe,movement,exercise,캠퍼스 한 바퀴 걷기,20,1,1,31,abandoned,0,10,0,,,
+synthetic_course_demo,P013,S0015,1,2026-08-08T11:50:00+09:00,weekend,morning,28,20-39,5,high,cafe,small_task,admin,제출 목록 우선순위 정리,10,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P002,S0016,1,2026-08-09T16:20:00+09:00,weekend,afternoon,90,90+,2,low,library,small_task,admin,메일과 일정 세 개 정리,60,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P037,S0017,2,2026-08-10T09:30:00+09:00,weekday,morning,27,20-39,3,medium,lounge,recharge,recovery,호흡과 물 마시기,20,1,1,22,abandoned,0,14,0,,,
+synthetic_course_demo,P040,S0018,1,2026-08-11T16:00:00+09:00,weekday,afternoon,59,40-59,1,low,lounge,focus,study,과제 소단위 한 개 완성,30,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P017,S0019,2,2026-08-12T15:50:00+09:00,weekday,afternoon,87,60-89,1,low,outside,small_task,admin,제출 목록 우선순위 정리,40,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P021,S0020,1,2026-08-13T18:40:00+09:00,weekday,evening,31,20-39,5,high,lounge,small_task,admin,메일과 일정 세 개 정리,10,1,1,55,abandoned,0,3,1,4,5,fit_time
+synthetic_course_demo,P040,S0021,2,2026-08-04T13:40:00+09:00,weekday,afternoon,48,40-59,1,low,outside,small_task,admin,다음 수업 준비물 점검,25,1,1,54,completed,1,28,0,,,
+synthetic_course_demo,P030,S0022,1,2026-08-05T11:20:00+09:00,weekday,morning,85,60-89,3,medium,cafe,focus,study,강의노트 핵심 3줄 정리,40,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P015,S0023,1,2026-08-06T18:10:00+09:00,weekday,evening,71,60-89,3,medium,lounge,focus,study,강의노트 핵심 3줄 정리,55,1,1,50,completed,1,54,1,5,5,easy_start
+synthetic_course_demo,P026,S0024,1,2026-08-07T17:50:00+09:00,weekday,evening,47,40-59,3,medium,library,recharge,recovery,화면 없이 천천히 걷기,25,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P007,S0025,1,2026-08-08T13:30:00+09:00,weekend,afternoon,20,20-39,3,medium,cafe,focus,study,강의노트 핵심 3줄 정리,10,1,1,81,completed,1,10,1,5,5,fit_time
+synthetic_course_demo,P039,S0026,2,2026-08-09T12:40:00+09:00,weekend,afternoon,98,90+,2,low,lounge,movement,recovery,호흡과 물 마시기,75,1,1,28,completed,1,74,1,5,2,easy_start
+synthetic_course_demo,P033,S0027,1,2026-08-10T20:20:00+09:00,weekday,evening,98,90+,5,high,library,small_task,admin,메일과 일정 세 개 정리,60,1,1,55,completed,1,59,1,4,4,fit_time
+synthetic_course_demo,P040,S0028,3,2026-08-11T12:30:00+09:00,weekday,afternoon,106,90+,4,high,outside,movement,exercise,가벼운 야외 움직임,60,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P015,S0029,2,2026-08-12T13:20:00+09:00,weekday,afternoon,54,40-59,5,high,lounge,recharge,recovery,호흡과 물 마시기,30,1,1,23,abandoned,0,19,0,,,
+synthetic_course_demo,P022,S0030,1,2026-08-13T14:10:00+09:00,weekday,afternoon,44,40-59,2,low,outside,focus,study,강의노트 핵심 3줄 정리,30,1,1,9,abandoned,0,10,0,,,
+synthetic_course_demo,P040,S0031,4,2026-08-04T14:30:00+09:00,weekday,afternoon,39,20-39,2,low,library,movement,recovery,호흡과 물 마시기,20,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P010,S0032,1,2026-08-05T13:40:00+09:00,weekday,afternoon,37,20-39,3,medium,cafe,movement,exercise,캠퍼스 한 바퀴 걷기,10,1,1,79,completed,1,9,1,5,5,easy_start
+synthetic_course_demo,P040,S0033,5,2026-08-06T14:20:00+09:00,weekday,afternoon,45,40-59,3,medium,cafe,recharge,recovery,화면 없이 천천히 걷기,25,1,1,42,completed,1,21,1,2,5,irrelevant
+synthetic_course_demo,P035,S0034,1,2026-08-07T11:00:00+09:00,weekday,morning,81,60-89,1,low,library,focus,study,시험 범위 5문제 복습,40,1,1,55,abandoned,0,15,0,,,
+synthetic_course_demo,P012,S0035,1,2026-08-08T16:30:00+09:00,weekend,afternoon,22,20-39,4,high,library,recharge,recovery,호흡과 물 마시기,20,1,1,16,completed,1,22,1,4,5,fit_time
+synthetic_course_demo,P003,S0036,1,2026-08-09T09:30:00+09:00,weekend,morning,22,20-39,3,medium,lounge,focus,study,강의노트 핵심 3줄 정리,10,1,1,40,completed,1,10,1,4,5,easy_start
+synthetic_course_demo,P021,S0037,2,2026-08-10T14:00:00+09:00,weekday,afternoon,68,60-89,3,medium,lounge,small_task,admin,메일과 일정 세 개 정리,55,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P030,S0038,2,2026-08-11T14:10:00+09:00,weekday,afternoon,70,60-89,3,medium,lounge,movement,exercise,계단과 스트레칭 루틴,40,1,1,13,completed,1,40,0,,,
+synthetic_course_demo,P020,S0039,1,2026-08-12T18:20:00+09:00,weekday,evening,96,90+,2,low,library,recharge,recovery,호흡과 물 마시기,60,1,1,13,completed,1,66,1,4,4,easy_start
+synthetic_course_demo,P016,S0040,1,2026-08-13T14:50:00+09:00,weekday,afternoon,47,40-59,3,medium,cafe,small_task,admin,메일과 일정 세 개 정리,25,1,1,86,completed,1,25,1,3,5,irrelevant
+synthetic_course_demo,P011,S0041,1,2026-08-04T12:50:00+09:00,weekday,afternoon,37,20-39,4,high,outside,recharge,recovery,조용한 자리에서 눈 쉬기,20,1,1,14,completed,1,18,1,5,4,fit_time
+synthetic_course_demo,P028,S0042,2,2026-08-05T18:40:00+09:00,weekday,evening,55,40-59,3,medium,library,recharge,recovery,화면 없이 천천히 걷기,30,1,1,13,completed,1,29,1,3,4,irrelevant
+synthetic_course_demo,P035,S0043,2,2026-08-06T13:50:00+09:00,weekday,afternoon,22,20-39,2,low,cafe,recharge,recovery,호흡과 물 마시기,10,1,1,25,abandoned,0,2,0,,,
+synthetic_course_demo,P001,S0044,1,2026-08-07T10:00:00+09:00,weekday,morning,71,60-89,2,low,lounge,movement,recovery,호흡과 물 마시기,55,1,1,11,completed,1,56,0,,,
+synthetic_course_demo,P033,S0045,2,2026-08-08T13:10:00+09:00,weekend,afternoon,68,60-89,4,high,outside,small_task,admin,제출 목록 우선순위 정리,45,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P014,S0046,1,2026-08-09T11:40:00+09:00,weekend,morning,72,60-89,3,medium,cafe,focus,study,강의노트 핵심 3줄 정리,45,1,1,87,completed,1,50,1,5,4,fit_time
+synthetic_course_demo,P004,S0047,1,2026-08-10T20:10:00+09:00,weekday,evening,54,40-59,3,medium,lounge,movement,exercise,가벼운 야외 움직임,35,1,1,63,completed,1,38,1,5,2,fit_time
+synthetic_course_demo,P030,S0048,3,2026-08-11T17:10:00+09:00,weekday,evening,67,60-89,2,low,outside,small_task,admin,제출 목록 우선순위 정리,55,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P037,S0049,3,2026-08-12T20:50:00+09:00,weekday,evening,56,40-59,3,medium,cafe,recharge,recovery,조용한 자리에서 눈 쉬기,35,1,1,53,completed,1,37,1,2,3,irrelevant
+synthetic_course_demo,P036,S0050,2,2026-08-13T18:30:00+09:00,weekday,evening,36,20-39,3,medium,outside,movement,exercise,계단과 스트레칭 루틴,10,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P036,S0051,3,2026-08-04T12:50:00+09:00,weekday,afternoon,59,40-59,4,high,cafe,movement,exercise,가벼운 야외 움직임,25,1,1,87,completed,1,22,0,,,
+synthetic_course_demo,P039,S0052,3,2026-08-05T16:10:00+09:00,weekday,afternoon,91,90+,2,low,outside,movement,recovery,조용한 자리에서 눈 쉬기,60,1,1,58,abandoned,0,14,1,3,3,too_long
+synthetic_course_demo,P040,S0053,6,2026-08-06T18:00:00+09:00,weekday,evening,101,90+,3,medium,cafe,focus,study,과제 소단위 한 개 완성,55,1,1,54,completed,1,57,0,,,
+synthetic_course_demo,P029,S0054,2,2026-08-07T17:20:00+09:00,weekday,evening,25,20-39,3,medium,cafe,small_task,admin,메일과 일정 세 개 정리,15,1,1,81,completed,1,13,1,5,3,easy_start
+synthetic_course_demo,P035,S0055,3,2026-08-08T10:50:00+09:00,weekend,morning,61,60-89,2,low,outside,movement,recovery,조용한 자리에서 눈 쉬기,40,1,1,20,completed,1,39,0,,,
+synthetic_course_demo,P005,S0056,1,2026-08-09T14:00:00+09:00,weekend,afternoon,82,60-89,5,high,library,small_task,admin,제출 목록 우선순위 정리,45,1,1,57,completed,1,47,0,,,
+synthetic_course_demo,P025,S0057,1,2026-08-10T09:40:00+09:00,weekday,morning,43,40-59,4,high,outside,recharge,recovery,조용한 자리에서 눈 쉬기,35,1,1,25,completed,1,38,1,4,5,fit_time
+synthetic_course_demo,P028,S0058,3,2026-08-11T20:50:00+09:00,weekday,evening,26,20-39,4,high,library,recharge,recovery,호흡과 물 마시기,10,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P013,S0059,2,2026-08-12T17:10:00+09:00,weekday,evening,48,40-59,3,medium,library,small_task,admin,메일과 일정 세 개 정리,25,1,1,42,abandoned,0,14,0,,,
+synthetic_course_demo,P022,S0060,2,2026-08-13T20:40:00+09:00,weekday,evening,66,60-89,3,medium,outside,small_task,admin,메일과 일정 세 개 정리,55,1,1,23,completed,1,58,1,5,5,easy_start
+synthetic_course_demo,P018,S0061,2,2026-08-04T10:10:00+09:00,weekday,morning,77,60-89,5,high,cafe,movement,exercise,가벼운 야외 움직임,55,1,1,53,completed,1,47,1,5,5,easy_start
+synthetic_course_demo,P025,S0062,2,2026-08-05T17:40:00+09:00,weekday,evening,53,40-59,1,low,outside,small_task,admin,제출 목록 우선순위 정리,35,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P023,S0063,2,2026-08-06T09:10:00+09:00,weekday,morning,55,40-59,5,high,library,movement,exercise,캠퍼스 한 바퀴 걷기,25,1,1,55,completed,1,26,1,4,5,fit_time
+synthetic_course_demo,P038,S0064,3,2026-08-07T18:30:00+09:00,weekday,evening,80,60-89,2,low,library,small_task,admin,제출 목록 우선순위 정리,40,1,1,74,abandoned,0,8,0,,,
+synthetic_course_demo,P033,S0065,3,2026-08-08T16:00:00+09:00,weekend,afternoon,37,20-39,3,medium,cafe,focus,study,강의노트 핵심 3줄 정리,20,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P039,S0066,4,2026-08-09T14:40:00+09:00,weekend,afternoon,45,40-59,1,low,outside,movement,recovery,화면 없이 천천히 걷기,30,1,1,20,completed,1,27,1,4,4,fit_time
+synthetic_course_demo,P032,S0067,2,2026-08-10T13:30:00+09:00,weekday,afternoon,33,20-39,3,medium,library,recharge,recovery,조용한 자리에서 눈 쉬기,10,1,1,24,completed,1,8,0,,,
+synthetic_course_demo,P038,S0068,4,2026-08-11T16:00:00+09:00,weekday,afternoon,72,60-89,3,medium,lounge,movement,exercise,캠퍼스 한 바퀴 걷기,40,1,1,74,abandoned,0,27,0,,,
+synthetic_course_demo,P040,S0069,7,2026-08-12T11:20:00+09:00,weekday,morning,32,20-39,5,high,lounge,recharge,recovery,호흡과 물 마시기,20,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P029,S0070,3,2026-08-13T15:10:00+09:00,weekday,afternoon,20,20-39,3,medium,library,recharge,recovery,조용한 자리에서 눈 쉬기,20,1,1,47,completed,1,18,1,3,4,irrelevant
+synthetic_course_demo,P034,S0071,2,2026-08-04T19:50:00+09:00,weekday,evening,61,60-89,3,medium,outside,small_task,admin,메일과 일정 세 개 정리,40,1,1,15,abandoned,0,16,0,,,
+synthetic_course_demo,P027,S0072,1,2026-08-05T14:30:00+09:00,weekday,afternoon,49,40-59,5,high,outside,small_task,admin,다음 수업 준비물 점검,35,1,1,72,completed,1,29,1,4,1,fit_time
+synthetic_course_demo,P009,S0073,1,2026-08-06T14:20:00+09:00,weekday,afternoon,50,40-59,3,medium,library,recharge,recovery,조용한 자리에서 눈 쉬기,25,1,1,76,abandoned,0,14,1,5,3,easy_start
+synthetic_course_demo,P037,S0074,4,2026-08-07T18:40:00+09:00,weekday,evening,57,40-59,1,low,outside,focus,study,과제 소단위 한 개 완성,35,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P031,S0075,2,2026-08-08T10:20:00+09:00,weekend,morning,44,40-59,3,medium,lounge,focus,study,시험 범위 5문제 복습,25,1,1,44,completed,1,25,1,4,4,easy_start
+synthetic_course_demo,P027,S0076,2,2026-08-09T11:50:00+09:00,weekend,morning,54,40-59,4,high,library,focus,study,강의노트 핵심 3줄 정리,25,1,1,71,completed,1,28,1,3,5,irrelevant
+synthetic_course_demo,P027,S0077,3,2026-08-10T11:20:00+09:00,weekday,morning,61,60-89,3,medium,lounge,small_task,admin,다음 수업 준비물 점검,55,1,1,30,completed,1,56,1,4,5,fit_time
+synthetic_course_demo,P026,S0078,2,2026-08-11T18:40:00+09:00,weekday,evening,98,90+,4,high,cafe,recharge,recovery,조용한 자리에서 눈 쉬기,55,1,1,43,completed,1,47,0,,,
+synthetic_course_demo,P008,S0079,1,2026-08-12T14:50:00+09:00,weekday,afternoon,107,90+,3,medium,lounge,focus,study,시험 범위 5문제 복습,55,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P019,S0080,1,2026-08-13T16:10:00+09:00,weekday,afternoon,20,20-39,5,high,outside,focus,study,과제 소단위 한 개 완성,20,1,1,10,abandoned,0,13,1,4,5,easy_start
+synthetic_course_demo,P039,S0081,5,2026-08-04T14:50:00+09:00,weekday,afternoon,57,40-59,3,medium,outside,movement,exercise,계단과 스트레칭 루틴,30,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P014,S0082,2,2026-08-05T17:40:00+09:00,weekday,evening,40,40-59,2,low,cafe,recharge,recovery,조용한 자리에서 눈 쉬기,35,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P034,S0083,3,2026-08-06T13:10:00+09:00,weekday,afternoon,36,20-39,3,medium,library,recharge,recovery,조용한 자리에서 눈 쉬기,10,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P031,S0084,3,2026-08-07T19:40:00+09:00,weekday,evening,48,40-59,3,medium,outside,movement,exercise,가벼운 야외 움직임,25,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P035,S0085,4,2026-08-08T10:50:00+09:00,weekend,morning,41,40-59,3,medium,cafe,recharge,recovery,호흡과 물 마시기,30,1,1,77,abandoned,0,18,1,4,4,easy_start
+synthetic_course_demo,P033,S0086,4,2026-08-09T11:10:00+09:00,weekend,morning,78,60-89,3,medium,cafe,movement,exercise,캠퍼스 한 바퀴 걷기,55,1,1,79,completed,1,63,1,4,4,easy_start
+synthetic_course_demo,P032,S0087,3,2026-08-10T14:00:00+09:00,weekday,afternoon,20,20-39,5,high,lounge,movement,exercise,계단과 스트레칭 루틴,20,1,1,37,completed,1,21,1,5,4,fit_time
+synthetic_course_demo,P038,S0088,5,2026-08-11T17:10:00+09:00,weekday,evening,44,40-59,3,medium,cafe,small_task,admin,다음 수업 준비물 점검,30,1,1,10,completed,1,27,1,5,2,easy_start
+synthetic_course_demo,P026,S0089,3,2026-08-12T11:40:00+09:00,weekday,morning,88,60-89,3,medium,lounge,focus,study,강의노트 핵심 3줄 정리,55,1,1,57,completed,1,49,1,5,4,fit_time
+synthetic_course_demo,P016,S0090,2,2026-08-13T12:30:00+09:00,weekday,afternoon,62,60-89,4,high,cafe,recharge,recovery,화면 없이 천천히 걷기,45,1,1,85,completed,1,48,1,5,4,fit_time
+synthetic_course_demo,P031,S0091,4,2026-08-04T20:30:00+09:00,weekday,evening,84,60-89,4,high,library,small_task,admin,메일과 일정 세 개 정리,55,1,1,91,completed,1,46,1,5,3,easy_start
+synthetic_course_demo,P024,S0092,2,2026-08-05T19:30:00+09:00,weekday,evening,50,40-59,3,medium,lounge,recharge,recovery,호흡과 물 마시기,30,1,1,66,completed,1,24,1,5,3,easy_start
+synthetic_course_demo,P006,S0093,1,2026-08-06T09:20:00+09:00,weekday,morning,32,20-39,1,low,library,recharge,recovery,호흡과 물 마시기,15,1,1,32,abandoned,0,10,0,,,
+synthetic_course_demo,P025,S0094,3,2026-08-07T13:50:00+09:00,weekday,afternoon,62,60-89,3,medium,lounge,movement,exercise,캠퍼스 한 바퀴 걷기,55,1,1,49,completed,1,50,1,2,4,irrelevant
+synthetic_course_demo,P039,S0095,6,2026-08-08T13:40:00+09:00,weekend,afternoon,34,20-39,1,low,cafe,focus,study,시험 범위 5문제 복습,20,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P024,S0096,3,2026-08-09T14:30:00+09:00,weekend,afternoon,94,90+,3,medium,lounge,focus,study,강의노트 핵심 3줄 정리,75,1,1,91,abandoned,0,27,0,,,
+synthetic_course_demo,P032,S0097,4,2026-08-10T14:30:00+09:00,weekday,afternoon,95,90+,3,medium,cafe,focus,study,과제 소단위 한 개 완성,75,1,1,45,completed,1,85,1,4,5,fit_time
+synthetic_course_demo,P019,S0098,2,2026-08-11T12:30:00+09:00,weekday,afternoon,100,90+,3,medium,outside,focus,study,시험 범위 5문제 복습,55,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P036,S0099,4,2026-08-12T15:40:00+09:00,weekday,afternoon,38,20-39,5,high,library,recharge,recovery,화면 없이 천천히 걷기,10,1,1,80,abandoned,0,4,0,,,
+synthetic_course_demo,P037,S0100,5,2026-08-13T18:20:00+09:00,weekday,evening,53,40-59,3,medium,library,movement,exercise,계단과 스트레칭 루틴,35,1,1,16,completed,1,29,1,4,5,fit_time
+synthetic_course_demo,P039,S0101,7,2026-08-04T16:10:00+09:00,weekday,afternoon,50,40-59,1,low,lounge,movement,recovery,화면 없이 천천히 걷기,35,1,1,80,completed,1,32,1,4,5,easy_start
+synthetic_course_demo,P023,S0102,3,2026-08-05T12:10:00+09:00,weekday,afternoon,23,20-39,3,medium,outside,movement,exercise,캠퍼스 한 바퀴 걷기,15,1,0,,not_started,0,,0,,,
+synthetic_course_demo,P034,S0103,4,2026-08-06T15:20:00+09:00,weekday,afternoon,113,90+,1,low,outside,focus,study,시험 범위 5문제 복습,75,1,1,23,abandoned,0,20,1,4,3,fit_time
+synthetic_course_demo,P020,S0104,2,2026-08-07T12:50:00+09:00,weekday,afternoon,99,90+,3,medium,outside,recharge,recovery,호흡과 물 마시기,55,1,1,36,completed,1,53,1,5,4,fit_time

@@ -1,0 +1,10 @@
+metric,numerator,denominator,value,unit,target,definition
+landing_sessions,142,,142,sessions,,landing_view 고유 세션
+builder_start_rate,118,142,83.1,percent,75,routine_builder_start / landing_view
+recommendation_reach_rate,104,118,88.1,percent,80,recommendation_view / routine_builder_start
+routine_start_rate,75,104,72.1,percent,65,routine_start / recommendation_view
+start_to_complete_rate,55,75,73.3,percent,65,routine_complete / routine_start
+helpfulness_mean,207,50,4.14,score_1_to_5,4,helpfulness_score 평균
+helpfulness_positive_rate,40,50,80,percent,75,helpfulness_score 4점 이상 비율
+reuse_intent_mean,204,50,4.08,score_1_to_5,4,reuse_intent_score 평균
+repeat_tester_rate,28,40,70,percent,50,2회 이상 이용한 가상 참여자 비율

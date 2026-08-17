@@ -2,7 +2,9 @@
 
 대학생이 다음 수업 전까지 남은 공강을 애매하게 흘려보내지 않도록, 시간·에너지·목적·장소를 바탕으로 실행 가능한 3단계 루틴을 추천하는 서비스입니다.
 
-배포 화면: https://teumsae-campus.dlaedgus.chatgpt.site
+현재 배포 화면: https://teumsae-campus.dlaedgus.chatgpt.site
+
+GitHub 저장소: https://github.com/dlaedgus/-teumsae-campus
 
 ## 서비스 흐름
 
@@ -35,7 +37,7 @@
 
 ## 로컬 실행
 
-필요 환경은 Node.js 22.13 이상입니다.
+필요 환경은 Node.js 20 이상입니다.
 
 ```bash
 npm ci
@@ -50,10 +52,10 @@ npm run data:generate
 
 ## Vercel 배포
 
-이 저장소는 내부 배포용 빌드와 Vercel용 Next.js 빌드를 함께 지원합니다. `vercel.json`이 Vercel에서 `npm run build:vercel`을 사용하도록 지정합니다.
+이 저장소는 Vercel에 바로 배포할 수 있는 Next.js 프로젝트입니다. `vercel.json`이 설치와 프로덕션 빌드 명령을 지정합니다.
 
-1. GitHub에서 새 저장소를 만들고 이 폴더 전체를 push합니다.
-2. Vercel의 Add New Project에서 해당 저장소를 Import합니다.
+1. Vercel의 Add New Project에서 `dlaedgus/-teumsae-campus` 저장소를 Import합니다.
+2. Project Name은 `teumsae-campus`로 입력합니다.
 3. Framework Preset이 Next.js인지 확인합니다.
 4. 별도 환경변수 없이 Deploy를 실행합니다.
 
