@@ -650,6 +650,10 @@ export type Recommendation = {
   title: string;
   summary: string;
   reason: string;
+  rationale: readonly {
+    label: string;
+    text: string;
+  }[];
   outcome: string;
   place: string;
   tool: string;
@@ -763,25 +767,41 @@ function buildRecommendation(template: RoutineTemplate, answers: Answers): Recom
     answers.tool === "none"
       ? "도구 없이 준비합니다."
       : `${getAnswerLabel("tool", answers.tool)} 기준으로 준비합니다.`;
+  const steps = buildSteps(
+    template,
+    answers,
+    needsAdaptation ? adaptation.task : undefined,
+    needsAdaptation ? adaptableFrame[answers.goal].prepare : undefined,
+    needsAdaptation ? adaptableFrame[answers.goal].close : undefined,
+  );
+  const reason = `${energyReason[answers.energy]} ${blockerReason[answers.blocker]}${
+    needsAdaptation ? " 선택한 장소와 도구에서도 가능한 행동으로 바꿨습니다." : ""
+  }`;
   return {
     id: template.id,
     title: needsAdaptation ? adaptation.title : template.title,
     summary: needsAdaptation ? adaptation.summary : template.summary,
-    reason: `${energyReason[answers.energy]} ${blockerReason[answers.blocker]}${
-      needsAdaptation ? " 선택한 장소와 도구에서도 가능한 행동으로 바꿨습니다." : ""
-    }`,
+    reason,
+    rationale: [
+      {
+        label: "목표",
+        text: `${getAnswerLabel("goal", answers.goal)}에 맞춰 오늘 남길 결과를 ‘${outcome}’로 좁혔습니다.`,
+      },
+      {
+        label: "시간과 에너지",
+        text: `${getAnswerLabel("minutes", answers.minutes)}과 ${getAnswerLabel("energy", answers.energy)} 상태를 기준으로 ${steps.length}단계 실행 순서를 만들었습니다.`,
+      },
+      {
+        label: "실행 조건",
+        text: `${getAnswerLabel("place", answers.place)} · ${getAnswerLabel("tool", answers.tool)} 환경과 ‘${getAnswerLabel("blocker", answers.blocker)}’ 방해 요인을 첫 행동에 반영했습니다.`,
+      },
+    ],
     outcome,
     place: getAnswerLabel("place", answers.place),
     tool: getAnswerLabel("tool", answers.tool),
     placeTip: `${placeGuidance[answers.place]} ${toolPreparation}`,
     matchLine: `${getAnswerLabel("minutes", answers.minutes)} · ${getAnswerLabel("energy", answers.energy)} · ${getAnswerLabel("goal", answers.goal)}`,
-    steps: buildSteps(
-      template,
-      answers,
-      needsAdaptation ? adaptation.task : undefined,
-      needsAdaptation ? adaptableFrame[answers.goal].prepare : undefined,
-      needsAdaptation ? adaptableFrame[answers.goal].close : undefined,
-    ),
+    steps,
   };
 }
 
